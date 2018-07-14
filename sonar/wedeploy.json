@@ -1,0 +1,17 @@
+{
+    "id": "sonar",
+    "image": "sonarqube:7.1-alpine",
+    "port": 9000,
+    "env": {
+        "SONARQUBE_JDBC_USERNAME": "sonar",
+        "SONARQUBE_JDBC_PASSWORD": "sonar",
+        "SONARQUBE_JDBC_URL": "jdbc:postgresql://db:5432/sonar"
+    },
+    "volumes": {
+        "sonarqubeConf": "/opt/sonarqube/conf",
+        "sonarqubeData": "/opt/sonarqube/data",
+        "sonarqubeExtensions": "/opt/sonarqube/extensions",
+        "sonarqubeBundledPlugins": "/opt/sonarqube/lib/bundled-plugins"
+    },
+    "dependencies": ["db"]
+}

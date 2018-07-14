@@ -1,0 +1,12 @@
+{
+    "id": "db",
+    "image": "postgres",
+    "env": {
+        "POSTGRES_USER": "sonar",
+        "POSTGRES_PASSWORD": "sonar"
+    },
+    "volumes": {
+        "postgresql": "/var/lib/postgresql",
+        "postgresqlData": "/var/lib/postgresql/data"
+    }
+}
